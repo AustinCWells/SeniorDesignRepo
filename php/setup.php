@@ -1,7 +1,10 @@
 <?php
 	session_start();
 	
+	ob_start();
+	
 	require "mysqlconnect.php";
+	require "page.php";
 	require "login.php";
 	require "RBAC.php";
 	require "core.php";
