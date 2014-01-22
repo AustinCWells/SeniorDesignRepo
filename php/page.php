@@ -17,9 +17,12 @@
 		}
 		
 		function endpage() {
-			$initialkey = array_search("content",$this->templateorder);
+			$initialkey = array_search("content",$this->templateorder) + 1;
 			$arraylength = count($this->templateorder);
-			//for($i = $initialkey; $i++; $i<$arraylength) include_once("./components/".$i.".php");
+			for($i = $initialkey; $i<$arraylength; $i++) {
+				include_once("./components/".$this->templateorder[$i].".php");
+			}
+			
 		}
 	}
 ?>
