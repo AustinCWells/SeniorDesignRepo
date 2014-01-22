@@ -2,6 +2,7 @@
 	class page {
 		protected $title;
 		protected $description;
+		protected $author;
 		protected $template;
 		protected $templateorder;
 		
@@ -10,6 +11,7 @@
 			$this->description = $i['description'];
 			$this->template = $i['template'];
 			$this->templateorder = explode(",",file_get_contents("./templates/".$this->template));
+			$this->author = "";
 			foreach($this->templateorder as $n) {
 				if($n == "content") break;
 				else include_once("./components/".$n.".php");
