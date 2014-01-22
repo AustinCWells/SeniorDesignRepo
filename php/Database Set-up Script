@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS smuseniordesign
+CREATE DATABASE IF NOT EXISTS smuseniordesign;
 
-
+USE smuseniordesign;
 
 CREATE TABLE members (
   user_id INTEGER UNSIGNED NOT NULL auto_increment,
@@ -12,7 +12,7 @@ CREATE TABLE members (
   dt datetime NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (user_id),
   UNIQUE KEY user_id (user_id)
-)
+);
 
 
 

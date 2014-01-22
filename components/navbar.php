@@ -13,7 +13,13 @@
           <ul class="nav navbar-nav navbar-right">
 		<?php
 			$pages = scandir("../");
-			foreach($
+			foreach($pages as $p) {
+				if(strpos($p,'.php') !== false) {
+					?>
+						<li><a href="<?php echo $p; ?>"></a></li>
+					<?php
+				}
+			}
 		?>
             <li class="active"><a href="index.html">HOME</a></li>
             <li><a href="form.html">VIEW PROJECTS</a></li>
