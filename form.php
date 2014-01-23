@@ -10,69 +10,88 @@
 ?>
 
 
-	<div id="headerwrap">
+	<div id="blue">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
-				<h1>It Doesn't Take a Rocket <b>Scientist</b></h1>
-				<h2>It Takes an SMU Engineer</h2>
+				<h4>LEARN MORE ABOUT US</h4>
+				<p>WE ARE COOL PEOPLE</p>
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->
-	</div><!-- headerwrap -->
+	</div><!--  bluewrap -->
 
-
+	<!-- Form --> 
 	<div class="container w">
-		<div class="row centered">
-			<br><br>
-			<div class="col-lg-4">
-				<i class="fa fa-heart fa-5x"></i>
-				<h4>DESIGN</h4>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-			</div><!-- col-lg-4 -->
+			<div class="row">
+				<br>
+				<div class="col-lg-2">
+				</div>
+					<div class="col-lg-8">
+						<div class="well"> 
+							<form role="form">
+								<div class="form-group">
+							    	<label for="sponsorName">Sponsor Name</label>
+							    	<i class="fa fa-question help"></i>
+							    	<input type="text" class="form-control" id="sponsorName" placeholder="Enter name">
+							  	</div>
+							  	<div class="form-group">
+							    	<label for="phoneNumber">Contact Number</label>
+							    	<i class="fa fa-question help"></i>
+							    	<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter number">
+							  	</div>
+							  	<div class="form-group">
+							    	<label for="phoneNumber">Contact Email</label>
+							    	<i class="fa fa-question help"></i>
+							    	<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter email">
+							  	</div>
 
-			<div class="col-lg-4">
-				<i class="fa fa-laptop fa-5x"></i>
-				<h4>BOOTSTRAP</h4>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-			</div><!-- col-lg-4 -->
+							  	<div class="form-group">
+							  		<i class="fa fa-question help"></i>
+							    	<label for="sponsorName" rows="4" cols="50">Project Description</label>
+							    	<textarea class="form-control" rows="3"></textarea>
+							  	</div>
+							  	<div class="form-group">
+							    	<label for="phoneNumber" rows="4" cols="50">Primary User Needs </label>
+							    	<i class="fa fa-question help"></i>
+							    	<textarea class="form-control" rows="3"></textarea>
+							  	</div>
 
-			<div class="col-lg-4">
-				<i class="fa fa-trophy fa-5x"></i>
-				<h4>SUPPORT</h4>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-			</div><!-- col-lg-4 -->
-		</div><!-- row -->
+							  	<div class="form-group">
+							    	<label for="phoneNumber">Provided Budget</label>
+							    	<i class="fa fa-question help"></i>
+							    	<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter number">
+							  	</div>
+
+							  	<div class="form-group">
+							    	<label for="phoneNumber" rows="4" cols="50">Additional Resource</label>
+							    	<i class="fa fa-question help"></i>
+							    	<textarea class="form-control" rows="3"></textarea>
+							  	</div>
+
+							  	<div class="form-group">
+							    	<label for="exampleInputFile">File input</label>
+							    	<i class="fa fa-question help"></i>
+							    	<input type="file" id="exampleInputFile">
+							  	</div>
+							  	
+							  <button type="submit" class="btn btn-default">Submit</button>
+							  <input type="hidden" name="form" value="login"> 
+
+							</div><!-- well --> 
+						</form>
+					</div><!-- col-lg-8 -->
+				<div class="col-lg-2">
+				</div>
+
+			</div><!-- row -->
+
 		<br>
 		<br>
 	</div><!-- container -->
 
 
 
-
-	<div id="lg">
-		<div class="container">
-			<div class="row centered">
-				<h4>OUR AWESOME CLIENTS</h4>
-				<div class="col-lg-2 col-lg-offset-1">
-					<img src="img/c01.gif" alt="">
-				</div>
-				<div class="col-lg-2">
-					<img src="img/c02.gif" alt="">
-				</div>
-				<div class="col-lg-2">
-					<img src="img/c03.gif" alt="">
-				</div>
-				<div class="col-lg-2">
-					<img src="img/c04.gif" alt="">
-				</div>
-				<div class="col-lg-2">
-					<img src="img/c05.gif" alt="">
-				</div>
-			</div><!-- row -->
-		</div><!-- container -->
-	</div><!-- dg -->
-	
 	
 	<div id="r">
 		<div class="container">
@@ -132,8 +151,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	
+    <script src="css/bootstrap.min.js"></script>
 	
 <?php
 	$p->endpage();
