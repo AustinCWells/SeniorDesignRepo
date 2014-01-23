@@ -11,6 +11,9 @@
 	
 	require "core.php";
 	
+	scrapepageinfo();
+	$p = new page($pageinfo);
+	
 	//User already logged in??
 	$account;
 	if(isset($_SESSION['account'])) $account = deserialize($_SESSION['account']);

@@ -1,0 +1,2 @@
+Order deny,allow
+DirectoryIndex index.php

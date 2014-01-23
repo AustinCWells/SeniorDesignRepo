@@ -8,8 +8,14 @@
 		$contents = file_get_contents($self);
 		preg_match('/(%%%).*(%%%)/s',$contents,$fileheader);
 		$fileheader = str_replace(array('\r','\n','\t'),'',$fileheader[0]);
-		var_dump($fileheader);
-		preg_match_all('/((~).*?(?=~))|((~ ).*?(?=%%%))/s',$fileheader,$entries,PREG_SET_ORDER);
-		var_dump($entries);
+		//NEED TO FIX THIS REGEX TO NOT INCLUDE THE "~ "!!!!
+		preg_match_all('/((~ ).*?(?=~))|((~ ).*?(?=%%%))/s',$fileheader,$entries,PREG_SET_ORDER);	
+		$fileinfo = array();
+		foreach($entries as $i) {
+			$i = str_replace(array('~ ','\t','\n','\r'),'',$i[0]);
+			preg_match('/.*(?=: )/',$i,$key);
+			preg_match('/(?<=: ).*/',$i,$value);
+			$fileinfo[$key[0]] = $value[0];
+		}
 	}
 ?>
