@@ -7,13 +7,7 @@
 -->
 
 <?php
-	$pageinfo = array(
-		'title' => 'Home',
-		'description' => 'SMU Senior Design Home Page',
-		'template' => 'default');
 	require("php/setup.php");
-	scrapepageinfo();
-	$p = new page($pageinfo);
 ?>
 
 
