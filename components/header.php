@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo $this->description; ?>">
-    <meta name="author" content="<?php echo $this->author; ?>">
     <link rel="shortcut icon" href="ico/favicon.png">
-
     <title>Senior Design - <?php echo $this->title; ?></title>
 
     <!-- Bootstrap core CSS -->

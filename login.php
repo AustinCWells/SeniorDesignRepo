@@ -1,73 +1,56 @@
 <!--
 	%%%
-	~ Title: Home
-	~ Description: SMU Senior Design Home Page
+	~ Title: Login
+	~ Description: Log in to SMU Senior Design
 	~ Template: default
 	%%%
 -->
 
-<div id="headerwrap">
+<div id="blue">
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2">
-			<h1>It Doesn't Take a Rocket <b>Scientist</b></h1>
-			<h2>It Takes an SMU Engineer</h2>
+			<h4>LEARN MORE ABOUT US</h4>
+			<p>WE ARE COOL PEOPLE</p>
 			</div>
 		</div><!-- row -->
 	</div><!-- container -->
-</div><!-- headerwrap -->
+</div><!--  bluewrap -->
 
-
+<!-- Form --> 
 <div class="container w">
-	<div class="row centered">
-		<br><br>
-		<div class="col-lg-4">
-			<i class="fa fa-heart fa-5x"></i>
-			<h4>DESIGN</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-		</div><!-- col-lg-4 -->
+		<div class="row">
+			<br>
+			<div class="col-lg-4">
+			</div>
+				<div class="col-lg-4">
+					<form class="form-horizontal" role="form">
+						<div class="well">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+								<input class="form-control" type="text" placeholder="Email address">
+							</div>
+							<br>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+								<input class="form-control" type="password" placeholder="Password">
+							</div>
+							<br>
+							<button type="submit" class="btn btn-default">Login</button>
+							 <input type="hidden" name="form" value="login"> 
+						</div>
+					</form>
+				</div><!-- col-lg-8 -->
+			<div class="col-lg-4">
+			</div>
 
-		<div class="col-lg-4">
-			<i class="fa fa-laptop fa-5x"></i>
-			<h4>BOOTSTRAP</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-		</div><!-- col-lg-4 -->
+		</div><!-- row -->
 
-		<div class="col-lg-4">
-			<i class="fa fa-trophy fa-5x"></i>
-			<h4>SUPPORT</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-		</div><!-- col-lg-4 -->
-	</div><!-- row -->
 	<br>
 	<br>
 </div><!-- container -->
 
 
-
-
-<div id="lg">
-	<div class="container">
-		<div class="row centered">
-			<h4>OUR AWESOME CLIENTS</h4>
-			<div class="col-lg-2 col-lg-offset-1">
-				<img src="img/c01.gif" alt="">
-			</div>
-			<div class="col-lg-2">
-				<img src="img/c02.gif" alt="">
-			</div>
-			<div class="col-lg-2">
-				<img src="img/c03.gif" alt="">
-			</div>
-			<div class="col-lg-2">
-				<img src="img/c04.gif" alt="">
-			</div>
-			<div class="col-lg-2">
-				<img src="img/c05.gif" alt="">
-			</div>
-		</div><!-- row -->
-	</div><!-- container -->
-</div><!-- dg -->
 
 
 <div id="r">
@@ -128,4 +111,4 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="css/bootstrap.min.js"></script>

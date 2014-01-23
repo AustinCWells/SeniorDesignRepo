@@ -11,8 +11,7 @@
 	
 	require "core.php";
 	
-	scrapepageinfo();
-	$p = new page($pageinfo);
+	$p = new page();
 	
 	//User already logged in??
 	$account;

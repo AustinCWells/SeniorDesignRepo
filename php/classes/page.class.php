@@ -1,17 +1,8 @@
 <?php
 	class page {
-		protected $title;
-		protected $description;
-		protected $author;
-		protected $template;
-		protected $templateorder;
-		
-		public function __construct($i) {
-			$this->title = $i['title'];
-			$this->description = $i['description'];
-			$this->template = $i['template'];
-			$this->templateorder = explode(",",file_get_contents("./templates/".$this->template));
-			$this->author = "";
+		public function __construct() {
+			$this->scrapepageinfo();
+			$this->templateorder = explode(",",file_get_contents("./templates/".trim($this->template)));
 			foreach($this->templateorder as $n) {
 				if($n == "content") break;
 				else include_once("./components/".$n.".php");
@@ -25,6 +16,22 @@
 				include_once("./components/".$this->templateorder[$i].".php");
 			}
 			
+		}
+		
+		function scrapepageinfo() {
+			$self = ".".$_SERVER['PHP_SELF'];
+			$contents = file_get_contents($self);
+			preg_match('/(%%%).*(%%%)/s',$contents,$fileheader);
+			$fileheader = str_replace(array('\r','\n','\t'),'',$fileheader[0]);
+			//NEED TO FIX THIS REGEX TO NOT INCLUDE THE "~ "!!!!
+			preg_match_all('/((~ ).*?(?=~))|((~ ).*?(?=%%%))/s',$fileheader,$entries,PREG_SET_ORDER);	
+			foreach($entries as $i) {
+				$i = str_replace(array('~ ','\t','\n','\r'),'',$i[0]);
+				preg_match('/.*(?=: )/',$i,$key);
+				preg_match('/(?<=: ).*/',$i,$value);
+				$key = strtolower($key[0]);
+				$this->$key = $value[0];
+			}
 		}
 	}
 ?>
