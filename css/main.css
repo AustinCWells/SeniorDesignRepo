@@ -248,6 +248,7 @@ a:after {
 
 /****** SECTIONS *****/
 
+
 .w {
 	padding-top: 35px;
 }
@@ -258,7 +259,6 @@ a:after {
 
 .w i {
 	color: #3498db;
-	font-size: 30px;
 }
 
 
@@ -285,6 +285,13 @@ a:after {
 	padding: 5px;
 }
 
+.w .help{
+    color: #4F4F4F;
+}
+
+.w .help:hover{
+    color: #3498db;
+}
 /***** MODAL CONTACT *****/
 .modal-content {
 	border-radius: 0px;
