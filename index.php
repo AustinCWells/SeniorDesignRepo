@@ -1,12 +1,19 @@
+<!--
+	%%%
+	~ Title: Home
+	~ Description: SMU Senior Design Home Page
+	~ Template: default
+	%%%
+-->
+
 <?php
-	//Page setup/basic information
 	$pageinfo = array(
 		'title' => 'Home',
 		'description' => 'SMU Senior Design Home Page',
 		'template' => 'default');
 	require("php/setup.php");
+	scrapepageinfo();
 	$p = new page($pageinfo);
-	//End Set-up
 ?>
 
 
