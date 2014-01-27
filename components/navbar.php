@@ -15,6 +15,17 @@
             <li><a href="form.html">VIEW PROJECTS</a></li>
             <li><a href="services.html">SUBMIT PROPOSALS</a></li>
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
+		<li>
+			<?php
+				if($GLOBALS['account']->getLogged()) {
+					echo "<a href='account.php'>".$GLOBALS['account']->getEmail()."</a></li>";
+					echo "<li><a href='?logout=yes'>Logout</a></li>";
+				}
+				else {
+					echo "<a href='login.php'>Login</a>";
+				}
+			?>
+		</li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

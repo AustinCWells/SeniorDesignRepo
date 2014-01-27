@@ -24,20 +24,20 @@
 			<div class="col-lg-4">
 			</div>
 				<div class="col-lg-4">
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" action="login.php" method="post">
 						<div class="well">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-								<input class="form-control" type="text" placeholder="Email address">
+								<input class="form-control" type="text" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>" placeholder="Email address" name="email">
 							</div>
 							<br>
 							<div class="input-group">
 								<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-								<input class="form-control" type="password" placeholder="Password">
+								<input class="form-control" type="password" placeholder="Password" name="password">
 							</div>
 							<br>
 							<button type="submit" class="btn btn-default">Login</button>
-							 <input type="hidden" name="form" value="login"> 
+							<input type="hidden" name="form" value="login"> 
 						</div>
 					</form>
 				</div><!-- col-lg-8 -->

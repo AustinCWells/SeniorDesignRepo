@@ -11,12 +11,12 @@
 	
 	require "core.php";
 	
-	$p = new page();
-	
 	//User already logged in??
 	$account;
-	if(isset($_SESSION['account'])) $account = deserialize($_SESSION['account']);
+	if(isset($_SESSION['account'])) $account = unserialize($_SESSION['account']);
 	else $account = new account();
+	
+	$p = new page();
 	
 	//Establish MySQL connection 
 	$MySQL = new MySQL();
