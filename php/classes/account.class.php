@@ -1,12 +1,32 @@
 <?php	
 class account {
-	protected $logged;
-	protected $id;
-	protected $email;
-	protected $perms = array();
+	public $logged;
+	public $id;
+	public $email;
+	public $roles;
 	
 	public function __construct() {
 		$this->logged = false;
+		$this->roles = array();
+	}
+	
+	function initRoles() {
+		$this->roles = array();
+		$query = "SELECT t1.role_id, t2.role_name FROM user_role as t1 JOIN roles as t2 ON t1.role_id = t2.role_id WHERE t1.user_id = :user_id";
+		$query_params = array(":user_id" => $this->id);
+		$result = $GLOBALS['MySQL']->query($query,$query_params);
+		while($row = $result->fetch()) {
+			$this->roles[$row['role_name']] = role::getRolePerms($row['role_id']);
+		}
+	}
+	
+	function hasPrivilege($perm) {
+		foreach($this->roles as $role) {
+			if($role->hasPerm($perm)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	function register() {
@@ -87,7 +107,8 @@ class account {
 		if($login_ok) {
 			$this->logged = true;
 			$this->email = $row['email'];
-			$this->id = $row['user_id'];			
+			$this->id = $row['user_id'];
+			$this->initRoles();
 			$_SESSION['account'] = serialize($this);
 			header("Location: index.php"); 
 			die("Redirecting to index.php"); 
@@ -101,22 +122,6 @@ class account {
 		unset($_SESSION['account']);
 		header("Location: index.php");
 		die("Redirecting to index.php");
-	}
-	
-	function getLogged() {
-		return $this->logged;
-	}
-	
-	function getEmail() {
-		return $this->email;
-	}
-	
-	function getID() {
-		return $this->id;
-	}
-	
-	function getPerms() {
-		return $this->perms;
 	}
 }
 

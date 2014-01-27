@@ -17,8 +17,8 @@
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
 		<li>
 			<?php
-				if($GLOBALS['account']->getLogged()) {
-					echo "<a href='account.php'>".$GLOBALS['account']->getEmail()."</a></li>";
+				if($GLOBALS['account']->logged) {
+					echo "<a href='account.php'>".$GLOBALS['account']->email."</a></li>";
 					echo "<li><a href='?logout=yes'>Logout</a></li>";
 				}
 				else {
