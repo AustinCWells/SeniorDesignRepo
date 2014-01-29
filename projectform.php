@@ -24,54 +24,54 @@
 			</div>
 				<div class="col-lg-8">
 					<div class="well"> 
-						<form role="form">
+						<form role="form" action="projectform.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 							<label for="sponsorName">Sponsor Name</label>
 							<i class="fa fa-question help"></i>
-							<input type="text" class="form-control" id="sponsorName" placeholder="Enter name">
+							<input type="text" class="form-control" id="sponsorName" name="sponsorName" placeholder="Enter name">
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber">Contact Number</label>
 							<i class="fa fa-question help"></i>
-							<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter number">
+							<input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter number">
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber">Contact Email</label>
 							<i class="fa fa-question help"></i>
-							<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter email">
+							<input type="tel" class="form-control" id="email" name="email" placeholder="Enter email">
 							</div>
 
 							<div class="form-group">
 								<i class="fa fa-question help"></i>
 							<label for="sponsorName" rows="4" cols="50">Project Description</label>
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" name="description" rows="3"></textarea>
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber" rows="4" cols="50">Primary User Needs </label>
 							<i class="fa fa-question help"></i>
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" name="userNeeds" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
 							<label for="phoneNumber">Provided Budget</label>
 							<i class="fa fa-question help"></i>
-							<input type="tel" class="form-control" id="phoneNumber" placeholder="Enter number">
+							<input type="tel" class="form-control" id="phoneNumber" name="budget" placeholder="Enter number">
 							</div>
 
 							<div class="form-group">
-							<label for="phoneNumber" rows="4" cols="50">Additional Resource</label>
+							<label for="phoneNumber" rows="4" cols="50">Additional Resources</label>
 							<i class="fa fa-question help"></i>
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" name="resources" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
 							<label for="exampleInputFile">File input</label>
 							<i class="fa fa-question help"></i>
-							<input type="file" id="exampleInputFile">
+							<input type="file" name="file" id="exampleInputFile">
 							</div>
 							
 						  <button type="submit" class="btn btn-default">Submit</button>
-						  <input type="hidden" name="form" value="login"> 
+						  <input type="hidden" name="form" value="submitproject"> 
 
 						</div><!-- well --> 
 					</form>

@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS smuseniordesign;
 
 USE smuseniordesign;
 
-CREATE TABLE members (
+CREATE TABLE IF NOT EXISTS members (
   user_id INTEGER UNSIGNED NOT NULL auto_increment,
  email varchar(255) NOT NULL default '',
   password varchar(50) NOT NULL default '',
@@ -13,23 +13,36 @@ CREATE TABLE members (
   UNIQUE KEY user_id (user_id)
 );
 
+CREATE TABLE IF NOT EXISTS projects (
+  project_id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  sponsorName VARCHAR(255) NOT NULL,
+  phoneNumber VARCHAR(10) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  description TEXT NOT NULL,
+  userNeeds TEXT NOT NULL,
+  budget VARCHAR(25) NOT NULL,
+  resources TEXT,
+  dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  filePath TINYTEXT,
+  PRIMARY KEY (project_id),
+  UNIQUE KEY project_id (project_id)
+);
 
-
-CREATE TABLE roles (
+CREATE TABLE IF NOT EXISTS roles (
   role_id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   role_name VARCHAR(50) NOT NULL,
  
   PRIMARY KEY (role_id)
 );
  
-CREATE TABLE permissions (
+CREATE TABLE IF NOT EXISTS permissions (
   perm_id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   perm_desc VARCHAR(50) NOT NULL,
  
   PRIMARY KEY (perm_id)
 );
  
-CREATE TABLE role_perm (
+CREATE TABLE IF NOT EXISTS role_perm (
   role_id INTEGER UNSIGNED NOT NULL,
   perm_id INTEGER UNSIGNED NOT NULL,
  
@@ -37,7 +50,7 @@ CREATE TABLE role_perm (
   FOREIGN KEY (perm_id) REFERENCES permissions(perm_id)
 );
  
-CREATE TABLE user_role (
+CREATE TABLE IF NOT EXISTS user_role (
   user_id INTEGER UNSIGNED NOT NULL,
   role_id INTEGER UNSIGNED NOT NULL,
  

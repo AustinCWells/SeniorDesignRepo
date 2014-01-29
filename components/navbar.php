@@ -7,13 +7,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SENI<i class="fa fa-circle"></i>R DESIGN</a>
+          <a class="navbar-brand" href="/">SENI<i class="fa fa-circle"></i>R DESIGN</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">HOME</a></li>
-            <li><a href="form.html">VIEW PROJECTS</a></li>
-            <li><a href="services.html">SUBMIT PROPOSALS</a></li>
+            <li class="active"><a href="index.php">HOME</a></li>
+            <li><a href="projects.php">PROJECTS</a></li>
+		<li><a href="projectform.php">SUBMIT PROPOSAL</a></li>
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
 		<li>
 			<?php

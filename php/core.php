@@ -1,6 +1,5 @@
 <?php
-	//Notices/Errors
-	$notices = array();
-	$errors = array();
-
+	function cleanInput($input) {
+		return $input;
+	}
 ?>

@@ -27,7 +27,7 @@
 		$form = $_POST['form'];
 		if($form=="login") $account->login();
 		elseif($form=="register") $account->register();
-		elseif($form=="submitproject") submitproject();
+		elseif($form=="submitproject") project::submit();
 	} elseif(!empty($_GET)) {
 		if($_GET['logout']=='yes') $account->logout();
 	}
