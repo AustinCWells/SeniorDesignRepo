@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS projects (
   budget VARCHAR(25) NOT NULL,
   resources TEXT,
   dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  filePath TINYTEXT,
   PRIMARY KEY (project_id),
   UNIQUE KEY project_id (project_id)
 );

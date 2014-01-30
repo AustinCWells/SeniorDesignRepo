@@ -67,7 +67,7 @@
 							<div class="form-group">
 							<label for="exampleInputFile">File input</label>
 							<i class="fa fa-question help"></i>
-							<input type="file" name="file" id="exampleInputFile">
+							<input type="file" name="files[]" id="exampleInputFile">
 							</div>
 							
 						  <button type="submit" class="btn btn-default">Submit</button>
