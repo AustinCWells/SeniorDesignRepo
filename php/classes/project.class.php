@@ -13,6 +13,37 @@ class project {
 	public function __construct() {
 	
 	}
+		
+	static function getProject($id) {
+		$project = new project();
+	}
+	
+	static function getProjects() {
+		$limit = 15;
+		$page;
+		if(!isset($_GET['page']) || !filter_input(INPUT_GET,'page',FILTER_VALIDATE_INT)) $page = 1;
+		else $page = $_GET['page'];
+		
+		$offset = ($page-1)*$limit;
+		
+		$query = "SELECT * FROM projects LIMIT %d OFFSET %d";
+		$query = sprintf($query,$limit,$offset);
+		$query_params = array();
+		$result = $GLOBALS['MySQL']->query($query,$query_params)->fetchAll();
+		return $result;
+	}
+	
+	static function getAllProjects() {
+		$query = "SELECT * FROM projects";
+		$result = $GLOBALS['MySQL']->query($query,array());
+		return $result->fetchAll();
+	}
+	
+	static function getNumProjects() {
+		$query = "SELECT COUNT(*) FROM projects";
+		$result = $GLOBALS['MySQL']->query($query,array());
+		return $result->fetch()[0];
+	}
 	
 	static function submit() {
 		$project = new project();
@@ -65,8 +96,8 @@ class project {
 			}
 		}
 		
-		//header("Location: projects.php");
-		//die("Redirecting to projects.php");
+		header("Location: projects.php");
+		die("Redirecting to projects.php");
 	}
 }
 ?>

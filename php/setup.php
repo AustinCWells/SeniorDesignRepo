@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	
 	ob_start();
 	
 	function autoloader($class) {
@@ -29,6 +28,6 @@
 		elseif($form=="register") $account->register();
 		elseif($form=="submitproject") project::submit();
 	} elseif(!empty($_GET)) {
-		if($_GET['logout']=='yes') $account->logout();
+		if(isset($_GET['logout']) && $_GET['logout']=='yes') $account->logout();
 	}
 ?>
