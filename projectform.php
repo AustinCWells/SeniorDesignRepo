@@ -1,6 +1,6 @@
 <!--
 	%%%
-	~ Title: Form
+	~ Title: Submit Proposal
 	~ Description: Project submission form
 	~ Template: default
 	%%%

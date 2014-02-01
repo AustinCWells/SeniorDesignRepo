@@ -3,12 +3,17 @@
 		public function __construct() {
 			$this->scrapepageinfo();
 			$this->templateorder = explode(",",file_get_contents("./templates/".trim($this->template)));
+		}
+		
+		//Applies all of this before content
+		function startpage() {
 			foreach($this->templateorder as $n) {
 				if($n == "content") break;
 				else include_once("./components/".$n.".php");
 			}
 		}
 		
+		//Applies all of this after the content
 		function endpage() {
 			$initialkey = array_search("content",$this->templateorder) + 1;
 			$arraylength = count($this->templateorder);
@@ -31,7 +36,7 @@
 				preg_match('/.*(?=: )/',$i,$key);
 				preg_match('/(?<=: ).*/',$i,$value);
 				$key = strtolower($key[0]);
-				$this->$key = $value[0];
+				$this->$key = trim($value[0],"\0\t\n\r");
 			}
 		}
 	}

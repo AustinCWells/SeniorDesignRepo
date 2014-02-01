@@ -3,6 +3,7 @@
 	~ Title: Projects
 	~ Description: Project listings page
 	~ Template: default
+	~ Login: yes
 	%%%
 -->
 
@@ -15,6 +16,7 @@
 	//Display all the projects on this page
 	foreach ($projects as $project) {
 		?>
+			<h3><?= $project['title']; ?></h3>
 			<a href="project.php?id=<?= $project['project_id']; ?>">
 				<strong><?= $project['project_id']; ?></strong>
 			</a>

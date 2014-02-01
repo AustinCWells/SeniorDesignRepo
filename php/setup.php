@@ -17,6 +17,14 @@
 	
 	$p = new page();
 	
+	//Does the page require you to be logged in???
+	if(isset($p->login) && trim($p->login) == 'yes' && !$account->logged) {
+		header("Location: login.php");
+		die("Redirecting to login.php");
+	}
+	
+	$p->startpage(); 
+	
 	//Establish MySQL connection 
 	$MySQL = new MySQL();
 	

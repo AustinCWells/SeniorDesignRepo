@@ -1,5 +1,6 @@
 <?php
 class project {
+	public $title;
 	public $sponsorName;
 	public $phoneNumber;
 	public $email;
@@ -49,6 +50,7 @@ class project {
 		$project = new project();
 		
 		//Collect all the information (minus file upload)
+		$project->title = $_POST['title'];
 		$project->sponsorName = $_POST['sponsorName'];
 		$project->phoneNumber = $_POST['phoneNumber'];
 		$project->email = $_POST['email'];
@@ -67,8 +69,9 @@ class project {
 		}
 		
 		//Insert the project into the database
-		$query = "INSERT INTO projects(sponsorName,phoneNumber,email,description,userNeeds,budget,resources) VALUES (:sponsorName,:phoneNumber,:email,:description,:userNeeds,:budget,:resources);";
+		$query = "INSERT INTO projects(title,sponsorName,phoneNumber,email,description,userNeeds,budget,resources) VALUES (:title,:sponsorName,:phoneNumber,:email,:description,:userNeeds,:budget,:resources);";
 		$query_params = array(
+			':title' => $project->title,
 			':sponsorName' => $project->sponsorName,
 			':phoneNumber' => $project->phoneNumber,
 			':email' => $project->email,
