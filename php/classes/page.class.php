@@ -19,7 +19,8 @@
 		}
 		
 		function scrapepageinfo() {
-			$self = ".".$_SERVER['PHP_SELF'];
+			preg_match('~/[^/]*$~',$_SERVER['PHP_SELF'],$self);
+			$self = '.'.$self[0];
 			$contents = file_get_contents($self);
 			preg_match('/(%%%).*(%%%)/s',$contents,$fileheader);
 			$fileheader = str_replace(array('\r','\n','\t'),'',$fileheader[0]);
