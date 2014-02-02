@@ -135,6 +135,7 @@ a:after {
 #headerwrap {
 	background: url(../img/header-bg.jpg) no-repeat center top;
     position: relative; 
+    background-attachment:fixed;
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
