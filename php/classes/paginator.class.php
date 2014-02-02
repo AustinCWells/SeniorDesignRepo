@@ -16,6 +16,7 @@ class paginator {
 	function draw() {
 		?>
 			<ul class="paginator pagination">
+				<li><a href="#">&laquo;</a></li>
 				<?php
 					for($i = 1;$i<=$this->totalpages;$i++) {
 						?>
@@ -25,6 +26,7 @@ class paginator {
 						<?php
 					}
 				?>
+			<li><a href="#">&raquo;</a></li>
 			</ul>
 		<?php
 	}
