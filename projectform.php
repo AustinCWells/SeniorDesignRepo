@@ -27,51 +27,51 @@
 						<form role="form" action="projectform.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 							<label for="sponsorName">Project Title</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="The title of your project. (Example: Out-Of-Stock Inventory Modeling Tool"><i class="fa fa-question help"></i></abbr>
 							<input type="text" class="form-control" id="sponsorName" name="title" placeholder="Enter name">
 							</div>
 							<div class="form-group">
 							<label for="sponsorName">Sponsor Name</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="The name of the sponsoring company. (Example: Microsoft"><i class="fa fa-question help"></i></abbr>
 							<input type="text" class="form-control" id="sponsorName" name="sponsorName" placeholder="Enter name">
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber">Contact Number</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Number you can be contacted by if any additional information is required"><i class="fa fa-question help"></i></abbr>
 							<input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter number">
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber">Contact Email</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Email you can be contaced by if any additional information is required"><i class="fa fa-question help"></i></abbr>
 							<input type="tel" class="form-control" id="email" name="email" placeholder="Enter email">
 							</div>
 
 							<div class="form-group">
 							<label for="sponsorName" rows="4" cols="50">Project Description</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Description of the project, feel free to include background, significance, approach, aims, expected outcomes, or any other additional information."><i class="fa fa-question help"></i></abbr>
 							<textarea class="form-control" name="description" rows="3"></textarea>
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber" rows="4" cols="50">Primary User Needs </label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Who is the project intended for, what are there particular needs (Example: child friendly, used by the elderly, etc."><i class="fa fa-question help"></i></abbr>
 							<textarea class="form-control" name="userNeeds" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
 							<label for="phoneNumber">Provided Budget</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="The monetary budget provided by the sponsor"><i class="fa fa-question help"></i></abbr>
 							<input type="tel" class="form-control" id="phoneNumber" name="budget" placeholder="Enter number">
 							</div>
 
 							<div class="form-group">
 							<label for="phoneNumber" rows="4" cols="50">Additional Resources</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Additional non monetary resources provided by the sponsor (Example: mentors, tools, hardware supplies)"><i class="fa fa-question help"></i></abbr>
 							<textarea class="form-control" name="resources" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
 							<label for="exampleInputFile">File input</label>
-							<i class="fa fa-question help"></i>
+							<abbr title="Any addition files that that will assist with the decision process (Example: .pdf, project images, etc."><i class="fa fa-question help"></i></abbr>
 							<input type="file" name="files[]" id="exampleInputFile">
 							</div>
 							
@@ -146,9 +146,3 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="css/bootstrap.min.js"></script>
