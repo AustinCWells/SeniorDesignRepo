@@ -25,19 +25,16 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
     		<h3 class="panel-title"><?= $project['title']; ?></h3>
-    	</div>
-    	<div class="panel-body">
-			<a href="project.php?id=<?= $project['project_id']; ?>">
+    		<a href="project.php?id=<?= $project['project_id']; ?>">
 				<strong><?= $project['project_id']; ?></strong>
 			</a>
-			<p><?= $project['sponsorName']; ?></p>
-			<p><?= $project['phoneNumber']; ?></p>
-			<p><?= $project['email']; ?></p>
+    	</div>
+    	<div class="panel-body">
+			
+			<p class="projectDescription"><b>Submission Date: </b> <?= $project['dt']; ?></p>
+			<p class="projectDescription"><b>Sponsor: </b> <?= $project['sponsorName']; ?></p>
 			<p><?= $project['description']; ?></p>
-			<p><?= $project['userNeeds']; ?></p>
-			<p><?= $project['budget']; ?></p>
-			<p><?= $project['resources']; ?></p>
-			<p><?= $project['dt']; ?></p>
+		
 		</div>
 	</div>
 		<?php
