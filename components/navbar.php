@@ -20,7 +20,7 @@
 		<li
 			<?php if($this->title == "Submit Proposal") echo ' class="active"'; ?>
 		><a href="projectform.php">SUBMIT PROPOSAL</a></li>
-            <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
+            
 		<li
 			<?php if($this->title == "Login" || $this->title == "Account") echo ' class="active"'; ?>
 		>
