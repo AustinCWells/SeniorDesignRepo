@@ -420,3 +420,8 @@ a:after {
     font-size: 30px;
 }
 
+#navbarLogo{
+    height:65px;
+    position:absolute;
+    top:5px;
+}

@@ -15,17 +15,17 @@ class paginator {
 	
 	function draw() {
 		?>
-			<div class="paginator">
+			<ul class="paginator pagination">
 				<?php
 					for($i = 1;$i<=$this->totalpages;$i++) {
 						?>
-							<a href="projects.php?page=<?= $i; ?>">
+							<li><a href="projects.php?page=<?= $i; ?>">
 								<?= $i; ?>
-							</a>
+							</a></li>
 						<?php
 					}
 				?>
-			</div>
+			</ul>
 		<?php
 	}
 }

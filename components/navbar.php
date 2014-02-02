@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">SENI<i class="fa fa-circle"></i>R DESIGN</a>
+          <a class="navbar-brand" href="/"><img src="img/SYD.png" id="navbarLogo"></img></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

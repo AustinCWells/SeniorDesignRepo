@@ -10,8 +10,7 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2">
-			<h1>It Doesn't Take a Rocket <b>Scientist</b></h1>
-			<h2>It Takes an SMU Engineer</h2>
+			<img src="img/SYD.png"></img>
 			</div>
 		</div><!-- row -->
 	</div><!-- container -->
