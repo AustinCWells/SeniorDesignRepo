@@ -26,6 +26,11 @@
 					<div class="well"> 
 						<form role="form" action="projectform.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
+							<label for="sponsorName">Project Title</label>
+							<i class="fa fa-question help"></i>
+							<input type="text" class="form-control" id="sponsorName" name="title" placeholder="Enter name">
+							</div>
+							<div class="form-group">
 							<label for="sponsorName">Sponsor Name</label>
 							<i class="fa fa-question help"></i>
 							<input type="text" class="form-control" id="sponsorName" name="sponsorName" placeholder="Enter name">
@@ -42,8 +47,8 @@
 							</div>
 
 							<div class="form-group">
-								<i class="fa fa-question help"></i>
 							<label for="sponsorName" rows="4" cols="50">Project Description</label>
+							<i class="fa fa-question help"></i>
 							<textarea class="form-control" name="description" rows="3"></textarea>
 							</div>
 							<div class="form-group">
