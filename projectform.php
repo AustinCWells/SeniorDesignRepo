@@ -53,7 +53,7 @@
 							</div>
 							<div class="form-group">
 							<label for="phoneNumber" rows="4" cols="50">Primary User Needs </label>
-							<abbr title="Who is the project intended for, what are there particular needs (Example: child friendly, used by the elderly, etc."><i class="fa fa-question help"></i></abbr>
+							<abbr title="Who is the project intended for, what are their particular needs (Example: child friendly, used by the elderly, etc."><i class="fa fa-question help"></i></abbr>
 							<textarea class="form-control" name="userNeeds" rows="3"></textarea>
 							</div>
 
