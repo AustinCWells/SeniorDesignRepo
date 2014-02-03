@@ -30,8 +30,9 @@
 			    <li class="list-group-item" id="radditionalFiles">Links:</li>
 			    <li class="list-group-item">
 					<button type="button" class="btn btn-success">Accept</button>
-					<button type="button" class="btn btn-danger">Decline</button>
 					<button type="button" class="btn btn-warning">Waitlist</button>
+					<button type="button" class="btn btn-danger">Decline</button>
+					
 			    </li>
 			  </ul>
 			</div>

@@ -440,3 +440,11 @@ a:after {
 .projectDescription{
     margin-bottom: 0px;
 }
+
+.navbar-collapse{
+    background-color: #2d2d2d;
+}
+
+.container>.navbar-header{
+    height: 75px;
+}
