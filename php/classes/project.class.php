@@ -67,7 +67,7 @@ class project {
 		if(!filter_var($project->email,FILTER_VALIDATE_EMAIL)) {
 			die("Invalid e-mail!");
 		}
-		
+
 		//Insert the project into the database
 		$query = "INSERT INTO projects(title,sponsorName,phoneNumber,email,description,userNeeds,budget,resources) VALUES (:title,:sponsorName,:phoneNumber,:email,:description,:userNeeds,:budget,:resources);";
 		$query_params = array(
@@ -81,7 +81,7 @@ class project {
 			':resources' => $project->resources
 		);
 		$result = $GLOBALS['MySQL']->query($query,$query_params);
-		
+
 		//Need project ID for upload directory
 		$lastinsert = $GLOBALS['MySQL']->c->lastInsertId();
 		
@@ -99,8 +99,8 @@ class project {
 			}
 		}
 		
-		header("Location: projects.php");
-		die("Redirecting to projects.php");
+		//header("Location: projects.php");
+		//die("Redirecting to projects.php");
 	}
 }
 ?>

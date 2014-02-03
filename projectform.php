@@ -28,7 +28,7 @@
 							<div class="form-group">
 							<label for="sponsorName">Project Title</label>
 							<abbr title="The title of your project. (Example: Out-Of-Stock Inventory Modeling Tool"><i class="fa fa-question help"></i></abbr>
-							<input type="text" class="form-control" id="sponsorName" name="title" placeholder="Enter name">
+							<input type="text" class="form-control" id="title" name="title" placeholder="Enter name">
 							</div>
 							<div class="form-group">
 							<label for="sponsorName">Sponsor Name</label>

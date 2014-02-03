@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS members (
 
 CREATE TABLE IF NOT EXISTS projects (
   project_id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
   sponsorName VARCHAR(255) NOT NULL,
   phoneNumber VARCHAR(10) NOT NULL,
   email VARCHAR(255) NOT NULL,
@@ -23,6 +24,7 @@ CREATE TABLE IF NOT EXISTS projects (
   budget VARCHAR(25) NOT NULL,
   resources TEXT,
   dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  approval TINYINT NOT NULL,
   PRIMARY KEY (project_id),
   UNIQUE KEY project_id (project_id)
 );

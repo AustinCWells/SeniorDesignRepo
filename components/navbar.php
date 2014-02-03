@@ -14,9 +14,13 @@
             <li
 			<?php if($this->title == "Home") echo ' class="active"'; ?>
 		><a href="index.php">HOME</a></li>
-            <li
-			<?php if($this->title == "Projects") echo ' class="active"'; ?>
-		><a href="projects.php">PROJECTS</a></li>
+            <?php 
+			if($GLOBALS['account']->logged) {
+				echo '<li' ;
+				if($this->title == "Projects") echo ' class="active"';
+				echo '><a href="projects.php">PROJECTS</a></li>';
+			}
+		?>
 		<li
 			<?php if($this->title == "Submit Proposal") echo ' class="active"'; ?>
 		><a href="projectform.php">SUBMIT PROPOSAL</a></li>
@@ -27,10 +31,10 @@
 			<?php
 				if($GLOBALS['account']->logged) {
 					echo "<a href='account.php'>".$GLOBALS['account']->email."</a></li>";
-					echo "<li><a href='?logout=yes'>Logout</a></li>";
+					echo "<li><a href='?logout=yes'>LOGOUT</a></li>";
 				}
 				else {
-					echo "<a href='login.php'>Login</a>";
+					echo "<a href='login.php'>LOGIN</a>";
 				}
 			?>
 		</li>
