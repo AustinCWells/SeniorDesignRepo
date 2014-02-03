@@ -1,5 +1,6 @@
 <?php
 class project {
+	public $id;
 	public $title;
 	public $sponsorName;
 	public $phoneNumber;
@@ -8,6 +9,8 @@ class project {
 	public $userNeeds;
 	public $budget;
 	public $resources;
+	public $dt;
+	public $approval;
 	public $files;
 	private $uploaddir;
 	
@@ -17,6 +20,34 @@ class project {
 		
 	static function getProject($id) {
 		$project = new project();
+		
+		$query = "SELECT * FROM projects WHERE project_id = :id";
+		$query_params = array(
+			":id" => $id
+		);
+		$result = $GLOBALS['MySQL']->query($query,$query_params)->fetch();
+		
+		//Assign all variables from database
+		$project->id = $result['project_id'];
+		$project->title = $result['title'];
+		$project->sponsorName = $result['sponsorName'];
+		$project->phoneNumber = $result['phoneNumber'];
+		$project->email = $result['email'];
+		$project->description = $result['description'];
+		$project->userNeeds = $result['userNeeds'];
+		$project->budget = $result['budget'];
+		$project->resources = $result['resources'];
+		$project->dt = $result['dt'];
+		$project->approval = $result['approval'];
+		
+		//Get files in the project folder if any exist
+		$directory = array_diff(scandir(getcwd()."/uploads/projects/".$id),array('..','.'));
+		if(count($directory) > 0) {
+			$project->files = array();
+			foreach($directory as $filename) array_push($project->files,$filename);
+		}
+		
+		return $project;
 	}
 	
 	static function getProjects() {
@@ -27,7 +58,7 @@ class project {
 		
 		$offset = ($page-1)*$limit;
 		
-		$query = "SELECT * FROM projects LIMIT %d OFFSET %d";
+		$query = "SELECT * FROM projects ORDER BY project_id DESC LIMIT %d OFFSET %d";
 		$query = sprintf($query,$limit,$offset);
 		$query_params = array();
 		$result = $GLOBALS['MySQL']->query($query,$query_params)->fetchAll();
@@ -35,7 +66,7 @@ class project {
 	}
 	
 	static function getAllProjects() {
-		$query = "SELECT * FROM projects";
+		$query = "SELECT * FROM projects ORDER BY project_id DESC";
 		$result = $GLOBALS['MySQL']->query($query,array());
 		return $result->fetchAll();
 	}
@@ -99,8 +130,8 @@ class project {
 			}
 		}
 		
-		//header("Location: projects.php");
-		//die("Redirecting to projects.php");
+		header("Location: projects.php");
+		die("Redirecting to projects.php");
 	}
 }
 ?>
