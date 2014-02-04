@@ -23,28 +23,45 @@
 
 			  <!-- List group -->
 			  <ul class="list-group">
-			    <li class="list-group-item" id="submitDate">Submitted: <?= $project->dt; ?></li>
-			    <li class="list-group-item" id="contactNum">Contact # <?= $project->phoneNumber; ?></li>
+				 <li class="list-group-item" id="submitDate">Submitted: <?= dtToDate($project->dt); ?></li>
+				 <li class="list-group-item" id="contactNum">Contact #: <?= formatPhoneNumber($project->phoneNumber); ?></li>
 			    <li class="list-group-item" id="sponsor">Sponsor: <?= $project->sponsorName; ?></li>
 			    <li class="list-group-item" id="projectDescription">Project Description: <br> <?= $project->description; ?></li>
 			   	<li class="list-group-item" id="userNeeds">Primary User Needs: <br> <?= $project->userNeeds; ?></li>
 			    <li class="list-group-item" id="additionalResources">Additional Resources Provided: <br> <?= $project->resources; ?></li>
 			    
 			    <?php
+			    //List files (If there are any)
 				if($project->files != null) {
 					echo '<li class="list-group-item" id="radditionalFiles">Files:</li>';
 					foreach($project->files as $file) {
 						echo '<a href="/uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
 					}
 				}
-			    ?>
 			    
-			    <li class="list-group-item">
-					<button type="button" class="btn btn-success">Accept</button>
-					<button type="button" class="btn btn-warning">Waitlist</button>
-					<button type="button" class="btn btn-danger">Decline</button>
-					
-			    </li>
+				//Display approval or buttons if not rated yet
+				?>  <li class="list-group-item"> <?php
+				if($project->approval == '0') {
+				    ?>
+					   <a href="?approved=1<?= currentURIVars(); ?>"><button type="button" class="btn btn-success">Accept</button></a>
+					   <a href="?approved=2<?= currentURIVars(); ?>"><button type="button" class="btn btn-warning">Waitlist</button></a>
+					   <a href="?approved=3<?= currentURIVars(); ?>"><button type="button" class="btn btn-danger">Decline</button></a>
+				    <?php
+				} else {
+				    switch ($project->approval) {
+					   case '1': 
+						  echo "<p>Approved</p>";
+						  break;
+					   case '2':
+						  echo "<p>Waitlisted</p>";
+						  break;
+					   case '3':
+						  echo "<p>Declined</p>";
+						  break;
+				    }
+				}
+				?>
+				    </li>
 			  </ul>
 			</div>
 		</div>

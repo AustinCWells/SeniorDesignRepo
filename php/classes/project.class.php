@@ -50,9 +50,19 @@ class project {
 		return $project;
 	}
 	
+	//Alters the queries in respect to the GET variables presented
+	static function projectParams(&$query,&$query_params) {
+	    if(isset($_GET['approval'])) {
+		    $query .= " WHERE approval = :approval";
+		    $query_params[':approval'] = $_GET['approval'];
+		}
+	}
+	
 	static function getProjects() {
 		$limit = 15;
 		$page;
+		$query_params = array();
+		
 		if(!isset($_GET['page']) || !filter_input(INPUT_GET,'page',FILTER_VALIDATE_INT)) $page = 1;
 		else $page = $_GET['page'];
 		
@@ -60,21 +70,25 @@ class project {
 		
 		$query = "SELECT * FROM projects ORDER BY project_id DESC LIMIT %d OFFSET %d";
 		$query = sprintf($query,$limit,$offset);
-		$query_params = array();
+		
+		project::projectParams($query,$query_params);
+		
 		$result = $GLOBALS['MySQL']->query($query,$query_params)->fetchAll();
 		return $result;
 	}
 	
-	static function getAllProjects() {
-		$query = "SELECT * FROM projects ORDER BY project_id DESC";
-		$result = $GLOBALS['MySQL']->query($query,array());
-		return $result->fetchAll();
+	static function getNumProjects() {
+		$query_params = array();
+		$query = "SELECT COUNT(*) FROM projects";
+		project::projectParams($query,$query_params);
+		$result = $GLOBALS['MySQL']->query($query,$query_params);
+		return $result->fetch()[0];
 	}
 	
-	static function getNumProjects() {
-		$query = "SELECT COUNT(*) FROM projects";
-		$result = $GLOBALS['MySQL']->query($query,array());
-		return $result->fetch()[0];
+	static function getAllProjects() {
+		$query = "SELECT * FROM projects ORDER BY project_id DESC";
+		$result = $GLOBALS['MySQL']->query($query,$query_params);
+		return $result->fetchAll();
 	}
 	
 	static function submit() {
@@ -100,7 +114,7 @@ class project {
 		}
 
 		//Insert the project into the database
-		$query = "INSERT INTO projects(title,sponsorName,phoneNumber,email,description,userNeeds,budget,resources) VALUES (:title,:sponsorName,:phoneNumber,:email,:description,:userNeeds,:budget,:resources);";
+		$query = "INSERT INTO projects(title,sponsorName,phoneNumber,email,description,userNeeds,budget,resources,approval) VALUES (:title,:sponsorName,:phoneNumber,:email,:description,:userNeeds,:budget,:resources,0);";
 		$query_params = array(
 			':title' => $project->title,
 			':sponsorName' => $project->sponsorName,

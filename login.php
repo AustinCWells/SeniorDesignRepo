@@ -6,6 +6,13 @@
 	%%%
 -->
 
+<?php
+    if($GLOBALS['account']->logged) {
+	   header("Location: index.php");
+	   die("Redirecting to index.php");
+    }
+?>
+
 <div id="blue">
 	<div class="container">
 		<div class="row centered">
