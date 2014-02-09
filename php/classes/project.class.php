@@ -144,8 +144,8 @@ class project {
 			}
 		}
 		
-		header("Location: projects.php");
-		die("Redirecting to projects.php");
+		//header("Location: projects.php");
+		//die("Redirecting to projects.php");
 	}
 }
 ?>
