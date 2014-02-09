@@ -13,12 +13,13 @@
 		<div class="col-lg-1"> </div>
 		<div class="col-lg-10">
 
-		    <div class="sort">
-			   <p>Show:</p>
-			   <a href="projects.php">All projects</a>
-			   <a href="?approval=1">Approved projects</a>
-			   <a href="?approval=2">Waitlisted projects</a>
-			   <a href="?approval=3">Denied projects</a>
+		     <div class="sort">
+			   <ul class="nav nav-tabs">
+				   <li class="active"><a href="projects.php">All projects</a></li>
+				   <li><a href="?approval=1">Approved projects</a></li>
+				   <li><a href="?approval=2">Waitlisted projects</a></li>
+				   <li><a href="?approval=3">Denied projects</a></li>
+				</ul>
 		    </div>
 	<?php
 		new paginator();
