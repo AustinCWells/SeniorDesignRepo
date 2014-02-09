@@ -31,6 +31,7 @@ class account {
 	
 	function register() {
 		//Validation
+		if(empty($_POST['name'])) die("Please enter your name.");
 		if(empty($_POST['email'])) die("Please enter a email.");
 		if(empty($_POST['password'])) die("Please enter a password.");
 		if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) die("Invalid E-Mail Address.");
@@ -38,22 +39,19 @@ class account {
 		//Check to see if email is in use
 		$query = "SELECT 1 FROM members WHERE email = :email";
 		$query_params = array(':email'=>$_POST['email']);
-		try {
-			$result = $GLOBALS['MySQL']->query($query,$query_params);
-		} catch(PDOException $ex) {
-			die("Failed to run query: " . $ex->getMessage()); 
-		}
-		
+		$result = $GLOBALS['MySQL']->query($query,$query_params);
 		if($result->fetch()) die("This email is already in use.");
 		
 		//Prepare/run statement for entry into database
 		$query = " 
 		INSERT INTO members ( 
+		name,
 		password, 
 		salt, 
 		email,
 		regIP
 		) VALUES (
+		:name,
 		:password, 
 		:salt, 
 		:email,
@@ -66,6 +64,7 @@ class account {
 			$password = hash('sha256', $password . $salt); 
 		}
 		$query_params = array(
+			':name' => $_POST['name'],
 			':password' => $password, 
 			':salt' => $salt, 
 			':email' => $_POST['email'],
@@ -73,7 +72,6 @@ class account {
 		); 
 		$result = $GLOBALS['MySQL']->query($query,$query_params);
 		
-		var_dump($result,$password,$salt);
 		//Return to log-in page after register
 		header("Location: login.php");
 		die("Redirecting to login.php");

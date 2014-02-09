@@ -24,9 +24,8 @@
 		}
 		
 		function scrapepageinfo() {
-			preg_match('~/[^/]*$~',$_SERVER['PHP_SELF'],$self);
-			$self = '.'.$self[0];
-			$contents = file_get_contents($self);
+			$file = currentFile();
+			$contents = file_get_contents($file);
 			preg_match('/(%%%).*(%%%)/s',$contents,$fileheader);
 			$fileheader = str_replace(array('\r','\n','\t'),'',$fileheader[0]);
 			//NEED TO FIX THIS REGEX TO NOT INCLUDE THE "~ "!!!!

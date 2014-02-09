@@ -35,7 +35,7 @@
 				if($project->files != null) {
 					echo '<li class="list-group-item" id="radditionalFiles">Files:</li>';
 					foreach($project->files as $file) {
-						echo '<a href="/uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
+						echo '<a href="'.rootDirectory().'uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
 					}
 				}
 			    

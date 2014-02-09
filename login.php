@@ -44,6 +44,7 @@
 							</div>
 							<br>
 							<button type="submit" class="btn btn-default">Login</button>
+							<a href="registration.php" class="btn">Register</a>
 							<input type="hidden" name="form" value="login"> 
 						</div>
 					</form>

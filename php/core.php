@@ -15,4 +15,13 @@
 		  return $vars;
 	   } else return '';
 	}
+	
+	function currentFile() {
+		preg_match('~/[^/]*$~',$_SERVER['PHP_SELF'],$self);
+		return '.'.$self[0];
+	}
+	
+	function rootDirectory() {
+		return getcwd().'/';
+	}
 ?>

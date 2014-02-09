@@ -4,10 +4,11 @@ USE smuseniordesign;
 
 CREATE TABLE IF NOT EXISTS members (
   user_id INTEGER UNSIGNED NOT NULL auto_increment,
- email varchar(255) NOT NULL default '',
-  password varchar(50) NOT NULL default '',
-  salt char(16) NOT NULL default '',
-  regIP varchar(15) NOT NULL default '',
+  name varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
+  password varchar(50) NOT NULL,
+  salt char(16) NOT NULL,
+  regIP varchar(15) NOT NULL,
   dt datetime NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (user_id),
   UNIQUE KEY user_id (user_id)

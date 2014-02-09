@@ -24,11 +24,11 @@
 			<div class="col-lg-4">
 			</div>
 				<div class="col-lg-4">
-					<form class="form-horizontal" role="form" action="login.php" method="post">
+					<form class="form-horizontal" role="form" action="registration.php" method="post">
 						<div class="well">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-								<input class="form-control" type="text" value="" placeholder="Name" name="Full Name">
+								<input class="form-control" type="text" value="" placeholder="Name" name="name">
 							</div>
 							<br>
 							<div class="input-group">
@@ -43,26 +43,26 @@
 							<br>
 							<div class="radio">
 							  <label>
-							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							    <input type="radio" name="accountType" id="optionsRadios1" value="Student" checked>
 							    Student
 							  </label>
 							</div>
 							<div class="radio">
 							  <label>
-							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							    <input type="radio" name="accountType" id="optionsRadios2" value="Sponsor">
 							    Sponsor
 							  </label>
 							</div>
 							<div class="radio">
 							  <label>
-							    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option2">
+							    <input type="radio" name="accountType" id="optionsRadios3" value="Faculty">
 							    Faculty
 							  </label>
 							</div>
 							<br>
 
 							<button type="submit" class="btn btn-default">Login</button>
-							<input type="hidden" name="form" value="login"> 
+							<input type="hidden" name="form" value="register"> 
 						</div>
 					</form>
 				</div><!-- col-lg-8 -->

@@ -41,7 +41,7 @@ class project {
 		$project->approval = $result['approval'];
 		
 		//Get files in the project folder if any exist
-		$directory = array_diff(scandir(getcwd()."/uploads/projects/".$id),array('..','.'));
+		$directory = array_diff(scandir(rootDirectory()."uploads/projects/".$id),array('..','.'));
 		if(count($directory) > 0) {
 			$project->files = array();
 			foreach($directory as $filename) array_push($project->files,$filename);
@@ -103,7 +103,7 @@ class project {
 		$project->userNeeds = $_POST['userNeeds'];
 		$project->budget = $_POST['budget'];
 		$project->resources = $_POST['resources'];
-		$project->uploaddir = getcwd().'/uploads/projects/';
+		$project->uploaddir = rootDirectory().'uploads/projects/';
 		
 		//Clean phone number
 		$project->phoneNumber = str_replace(array("-","(",")","+"," "),"",$project->phoneNumber);
