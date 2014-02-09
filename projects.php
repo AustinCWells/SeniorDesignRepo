@@ -13,14 +13,22 @@
 		<div class="col-lg-1"> </div>
 		<div class="col-lg-10">
 
-		     <div class="sort">
-			   <ul class="nav nav-tabs">
-				   <li class="active"><a href="projects.php">All projects</a></li>
-				   <li><a href="?approval=1">Approved projects</a></li>
-				   <li><a href="?approval=2">Waitlisted projects</a></li>
-				   <li><a href="?approval=3">Denied projects</a></li>
+			<div class="sort">
+				<ul class="nav nav-tabs">
+					<li
+						<?php if(!isset($_GET['approval'])) echo 'class="active"'; ?>
+					><a href="projects.php">All projects</a></li>
+					<li
+						<?php if(isset($_GET['approval']) && $_GET['approval'] == 1) echo 'class="active"'; ?>
+					><a href="?approval=1">Approved projects</a></li>
+					<li 
+						<?php if(isset($_GET['approval']) && $_GET['approval'] == 2) echo 'class="active"'; ?>
+					><a href="?approval=2">Waitlisted projects</a></li>
+					<li 
+						<?php if(isset($_GET['approval']) && $_GET['approval'] == 3) echo 'class="active"'; ?>
+					><a href="?approval=3">Denied projects</a></li>
 				</ul>
-		    </div>
+			</div>
 	<?php
 		new paginator();
 

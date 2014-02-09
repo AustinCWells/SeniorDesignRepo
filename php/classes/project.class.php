@@ -77,10 +77,10 @@ class project {
 		
 		$offset = ($page-1)*$limit;
 		
-		$query = "SELECT * FROM projects ORDER BY project_id DESC LIMIT %d OFFSET %d";
-		$query = sprintf($query,$limit,$offset);
-		
+		$query = "SELECT * FROM projects";
 		project::projectParams($query,$query_params);
+		$query .= " ORDER BY project_id DESC LIMIT %d OFFSET %d";
+		$query = sprintf($query,$limit,$offset);
 		
 		$result = $GLOBALS['MySQL']->query($query,$query_params)->fetchAll();
 		return $result;
