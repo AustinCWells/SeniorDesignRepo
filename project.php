@@ -8,6 +8,9 @@
 -->
 
 <?php
+	if(isset($_GET['approved'])) {
+		project::setApproval($_GET['approved'],$_GET['id']);
+	}
 	$project = project::getProject($_GET['id']);
 ?>
 <div class="container"> 

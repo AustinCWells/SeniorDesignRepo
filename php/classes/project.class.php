@@ -18,6 +18,15 @@ class project {
 	
 	}
 		
+	static function setApproval($approval,$id) {
+		$query = "UPDATE projects SET approval = :approval WHERE project_id = :id";
+		$query_params = array(
+			":approval" => $approval,
+			":id" => $id
+		);
+		$GLOBALS['MySQL']->query($query,$query_params);
+	}
+		
 	static function getProject($id) {
 		$project = new project();
 		

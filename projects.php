@@ -32,8 +32,8 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-	    		<h3 class="panel-title"><?= $project['title']; ?></h3>
-	    		<a href="project.php?id=<?= $project['project_id']; ?>">
+				<a href="project.php?id=<?= $project['project_id']; ?>">
+					<h3 class="panel-title"><?= $project['title']; ?></h3>
 					<strong><?= $project['project_id']; ?></strong>
 				</a>
 	    	</div>
