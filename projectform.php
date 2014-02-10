@@ -70,10 +70,10 @@
 							</div>
 
 							<div class="form-group">
-							<label for="exampleInputFile">File input</label>
+							<label for="exampleInputFile">Upload files</label>
 							<abbr title="Any addition files that that will assist with the decision process (Example: .pdf, project images, etc."><i class="fa fa-question help"></i></abbr>
-							<input type="file" name="files[]" id="exampleInputFile">
-							</div>
+							<input type="file" class="multifile" name="files[]" multiple>
+							</div>	
 							
 						  <button type="submit" class="btn btn-default">Submit</button>
 						  <input type="hidden" name="form" value="submitproject"> 
