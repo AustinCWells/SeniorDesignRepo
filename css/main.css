@@ -83,7 +83,7 @@ a:after {
 
 
 .navbar {
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 14px;
     height:76px;
 }
@@ -452,3 +452,8 @@ a:after {
 
 .navbar-toggle 
     {margin-top: 21px;}
+
+img#MainLogo{
+    max-width: 433px;
+    width:100%;
+}

@@ -10,10 +10,12 @@
 	<div class="layer">
 	<div class="container">
 		<div class="row centered">
-			<div class="col-lg-8 col-lg-offset-2">
+			<div class="col-lg-3"> </div>
+			<div class="col-lg-6">
 			<br>
-			<img src="img/SYD.png"></img>
+			<img ID="MainLogo" src="img/SYD.png"></img>
 			</div>
+			<div class="col-lg-3"> </div>
 		</div><!-- row -->
 	</div><!-- container -->
 	</div><!-- background layer -->
@@ -24,21 +26,22 @@
 	<div class="row centered">
 		<br><br>
 		<div class="col-lg-4">
-			<i class="fa fa-heart fa-5x"></i>
-			<h4>DESIGN</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+			<i class="fa fa-group fa-5x"></i>
+			<h4>COLLABORATE</h4>
+			<p> Senior Lyle Engineers work in close knit collaborative groups to solve real world problems proposed by companies from the Dallas area and beyond.</p>
 		</div><!-- col-lg-4 -->
 
 		<div class="col-lg-4">
-			<i class="fa fa-laptop fa-5x"></i>
-			<h4>BOOTSTRAP</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+			<i class="fa fa-puzzle-piece fa-5x"></i>
+  				
+			<h4>SOLVE</h4>
+			<p>Teams work within a timeframe of fifteen weeks to create real solutions to industry problems.</p>
 		</div><!-- col-lg-4 -->
 
 		<div class="col-lg-4">
 			<i class="fa fa-trophy fa-5x"></i>
-			<h4>SUPPORT</h4>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+			<h4>GROW</h4>
+			<p>By working with industry experts, Lyle engineers gain the work experience needed to perform above and beyond in today's work place.</p>
 		</div><!-- col-lg-4 -->
 	</div><!-- row -->
 	<br>
@@ -53,13 +56,13 @@
 		<div class="row centered">
 			<h4>OUR AWESOME CLIENTS</h4>
 			<div class="col-lg-2 col-lg-offset-1">
-				<img src="img/c01.gif" alt="">
+				<img src="img/c01.png" style="width:100px;" alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c02.gif" alt="">
+				<img src="img/c02.png" style="width:100px;" alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c03.gif" alt="">
+				<img src="img/c03.png" style="width:100px;" alt="">
 			</div>
 			<div class="col-lg-2">
 				<img src="img/c04.gif" alt="">
@@ -88,40 +91,10 @@
 <div id="f">
 	<div class="container">
 		<div class="row centered">
-			<a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
-	
+		
 		</div><!-- row -->
 	</div><!-- container -->
 </div><!-- Footer -->
 
 
-<!-- MODAL FOR CONTACT -->
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-	<div class="modal-header">
-	  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	  <h4 class="modal-title" id="myModalLabel">contact us</h4>
-	</div>
-	<div class="modal-body">
-		  <div class="row centered">
-			<p>We are available 24/7, so don't hesitate to contact us.</p>
-			<p>
-				Somestreet Ave, 987<br/>
-					London, UK.<br/>
-					+44 8948-4343<br/>
-					hi@blacktie.co
-			</p>
-			<div id="mapwrap">
-	<iframe height="300" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=52.752693,22.791016&amp;spn=67.34552,156.972656&amp;z=2&amp;output=embed"></iframe>
-				</div>	
-		  </div>
-	</div>
-	<div class="modal-footer">
-	  <button type="button" class="btn btn-danger" data-dismiss="modal">Save & Go</button>
-	</div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
