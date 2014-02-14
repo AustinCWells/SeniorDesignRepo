@@ -457,3 +457,23 @@ img#MainLogo{
     max-width: 433px;
     width:100%;
 }
+
+form#projectForm div.input-group {
+    padding-bottom: 10px;
+}
+
+
+fieldset{
+    margin-top:50px;
+}
+fieldset:first-child{
+    margin-top: 10px;
+}
+
+form label { 
+font-weight: 300;
+}
+
+form legend{
+    font-weight: 400;
+}
