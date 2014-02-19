@@ -56,19 +56,19 @@
 		<div class="row centered">
 			<h4>OUR AWESOME CLIENTS</h4>
 			<div class="col-lg-2 col-lg-offset-1">
-				<img src="img/c01.png" style="width:100px;" alt="">
+				<img class="clientLogo" src="img/c01.png"  alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c02.png" style="width:100px;" alt="">
+				<img class="clientLogo Lockheed" src="img/c02.png"  alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c03.png" style="width:100px;" alt="">
+				<img class="clientLogo generalElectric" src="img/c03.png" s alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c04.gif" alt="">
+				<img class="clientLogo grantThorton" src="img/c04.png" alt="">
 			</div>
 			<div class="col-lg-2">
-				<img src="img/c05.gif" alt="">
+				<img class="clientLogo bigEast" src="img/c05.png" alt="">
 			</div>
 		</div><!-- row -->
 	</div><!-- container -->
@@ -79,8 +79,8 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2">
-				<h4>WE ARE STORYTELLERS. BRANDS ARE OUR SUBJECTS. DESIGN IS OUR VOICE.</h4>
-				<p>We believe ideas come from everyone, everywhere. At BlackTie, everyone within our agency walls is a designer in their own right. And there are a few principles we believe—and we believe everyone should believe—about our design craft. These truths drive us, motivate us, and ultimately help us redefine the power of design.</p>
+				<h4>WE ARE THE LYLE SCHOOL OF ENGINEERING. WE BUILD COOL THINGS THAT WORK.</h4>
+				<p>Based in Dallas Texas, we believe the best way to learn is by doing. This is why we team our engineers with industry experts to solve real world problems. By giving our Lyle students the chance to experience real world problem solving we give them one of a kind of experience that helps them develop the skills needed to perform above and beyond other college graduates.</p>
 			</div>
 		</div><!-- row -->
 	</div><!-- container -->

@@ -477,3 +477,43 @@ font-weight: 300;
 form legend{
     font-weight: 400;
 }
+
+.lockheed{
+    widht:120px;
+}
+.clientLogo{
+    width:100px;
+    margin-top: 50px;
+}
+
+.generalElectric{
+    width:90px;
+}
+
+.grantThorton{
+    width:180px;
+    padding-top:30px;
+}
+
+.bigEast{
+    width:130px;
+    padding-top:10px;
+}
+
+.projectFiles{
+    padding-left: 15px;
+}
+
+.backLogo{
+    margin-right: 20px;
+}
+
+.backLogo:hover{
+    color:black;
+    cursor:pointer
+}
+
+.declined{
+    background-color: red;
+
+}

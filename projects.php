@@ -38,22 +38,23 @@
 		//Display all the projects on this page
 		foreach ($projects as $project) {
 			?>
-
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<a href="project.php?id=<?= $project['project_id']; ?>">
-					<h3 class="panel-title"><?= $project['title']; ?></h3>
-					<strong><?= $project['project_id']; ?></strong>
-				</a>
-	    	</div>
-	    	<div class="panel-body">
+		<a href="project.php?id=<?= $project['project_id']; ?>">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a href="project.php?id=<?= $project['project_id']; ?>">
+						<h3 class="panel-title"><?= $project['title']; ?></h3>
+						<strong><?= $project['project_id']; ?></strong>
+					</a>
+		    	</div>
+		    	<div class="panel-body">
+					
+			    <p class="projectDescription"><b>Submission Date: </b> <?= dtToDate($project['dt']); ?></p>
+					<p class="projectDescription"><b>Sponsor: </b> <?= $project['sponsorName']; ?></p>
+					<p><?= $project['description']; ?></p>
 				
-		    <p class="projectDescription"><b>Submission Date: </b> <?= dtToDate($project['dt']); ?></p>
-				<p class="projectDescription"><b>Sponsor: </b> <?= $project['sponsorName']; ?></p>
-				<p><?= $project['description']; ?></p>
-			
+				</div>
 			</div>
-		</div>
+		</a>
 			<?php
 		}
 	?>

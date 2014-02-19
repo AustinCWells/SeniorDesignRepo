@@ -21,8 +21,15 @@
 		<div class="col-lg-10">
 			<div class="panel panel-primary">
 			  <!-- Default panel contents -->
-			  <div class="panel-heading" id="projectTitle"><?= $project->title; ?></div>
+			  <div class="panel-heading" id="projectTitle" onclick="goBack()"><i class="fa fa-angle-double-left backLogo" > </i><?= $project->title; ?></div>
+			
 
+			<script>
+			function goBack()
+			  {
+			  window.history.back()
+			  }
+			</script>
 
 			  <!-- List group -->
 			  <ul class="list-group">
@@ -38,7 +45,7 @@
 				if($project->files != null) {
 					echo '<li class="list-group-item" id="radditionalFiles">Files:</li>';
 					foreach($project->files as $file) {
-						echo '<a href="'.rootDirectory().'uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
+						echo '<a class="projectFiles" href="'.rootDirectory().'uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
 					}
 				}
 			    

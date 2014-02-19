@@ -82,8 +82,6 @@
 								<label for="phoneNumber" rows="4" cols="50">List any additional resources you would provide. i.e. dedicated mentors, hardware, software, etc.</label>
 								<textarea class="form-control" name="resources" rows="3"></textarea>
 								</div>
-
-								
 							</fieldset> 	
 							
 							<fieldset>
@@ -119,8 +117,8 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2">
-				<h4>WE ARE STORYTELLERS. BRANDS ARE OUR SUBJECTS. DESIGN IS OUR VOICE.</h4>
-				<p>We believe ideas come from everyone, everywhere. At BlackTie, everyone within our agency walls is a designer in their own right. And there are a few principles we believe—and we believe everyone should believe—about our design craft. These truths drive us, motivate us, and ultimately help us redefine the power of design.</p>
+				<h4>WE ARE THE LYLE SCHOOL OF ENGINEERING. WE BUILD COOL THINGS THAT WORK.</h4>
+				<p>Based in Dallas Texas, we believe the best way to learn is by doing. This is why we team our engineers with industry experts to solve real world problems. By giving our Lyle students the chance to experience real world problem solving we give them one of a kind of experience that helps them develop the skills needed to perform above and beyond other college graduates.</p>
 			</div>
 		</div><!-- row -->
 	</div><!-- container -->
