@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS members (
   password varchar(50) NOT NULL,
   salt char(16) NOT NULL,
   regIP varchar(15) NOT NULL,
-  dt datetime NOT NULL default CURRENT_TIMESTAMP,
+  dt timestamp NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (user_id),
   UNIQUE KEY user_id (user_id)
 );
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS projects (
   userNeeds TEXT NOT NULL,
   budget VARCHAR(25) NOT NULL,
   resources TEXT,
-  dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  dt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   approval TINYINT NOT NULL,
   PRIMARY KEY (project_id),
   UNIQUE KEY project_id (project_id)
