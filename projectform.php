@@ -16,14 +16,14 @@
 	</div><!-- container -->
 </div><!--  bluewrap -->
 
-<!-- Form --> 
+<!-- Form -->
 <div class="container w">
 		<div class="row">
 			<br>
 			<div class="col-lg-2">
 			</div>
 				<div class="col-lg-8">
-					<div class="well"> 
+					<div class="well">
 						<form role="form" ID="projectForm" action="projectform.php" method="POST" enctype="multipart/form-data">
 							<fieldset>
 								<legend>Sponsor Info</legend>
@@ -41,12 +41,12 @@
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon">Contact Email  </span>
-									<input type="tel" class="form-control" id="email" name="email" placeholder="JohnDoes@email.co">
+									<input type="tel" class="form-control" id="email" name="email" placeholder="JohnDoe@email.com">
 								</div>
 							</fieldset>
 
 							<fieldset>
-								<legend>Project Information</legend> 
+								<legend>Project Information</legend>
 								<div class="form-group">
 									<label for="title">Provide a descriptive project title.</label>
 									<input type="text" class="form-control" id="title" name="title" placeholder="">
@@ -55,7 +55,7 @@
 									<label for="description">Give a description of the project. Be as detailed as necessary. </label>
 									<textarea class="form-control" name="description" rows="3"></textarea>
 								</div>
-								
+
 								<label> List the top three goals the project is meant to accomplish. </label>
 								<div class="input-group">
 									<span class="input-group-addon" for="goalOne"> 1  </span>
@@ -69,10 +69,10 @@
 									<span class="input-group-addon" for="goalThree"> 3  </span>
 									<textarea class="form-control" name="goalThree" rows="2"></textarea>
 								</div>
-							</fieldset> 
-							
+							</fieldset>
+
 							<fieldset>
-								<legend>Project Resources </legend> 
+								<legend>Project Resources </legend>
 								<div class="input-group">
 								<span class="input-group-addon">Provided Budget </span>
 								<input type="tel" class="form-control" id="phoneNumber" name="budget" placeholder="">
@@ -82,23 +82,23 @@
 								<label for="phoneNumber" rows="4" cols="50">List any additional resources you would provide. i.e. dedicated mentors, hardware, software, etc.</label>
 								<textarea class="form-control" name="resources" rows="3"></textarea>
 								</div>
-							</fieldset> 	
-							
+							</fieldset>
+
 							<fieldset>
-								<legend>Additional Information </legend> 
+								<legend>Additional Information </legend>
 								<div class="form-group">
 								<label for="phoneNumber" rows="4" cols="50">List any additional information you feel will be relevent to the project</label>
-								<textarea class="form-control" name="resources" rows="3"></textarea>
+								<textarea class="form-control" name="additionalInfo" rows="3"></textarea>
 								</div>
 								<div class="form-group">
 								<label for="exampleInputFile">Attach any files related to the project.</label>
 								<input type="file" class="multifile" name="files[]" multiple>
 								</div>
-							</fieldset> 
+							</fieldset>
 						  <button type="submit" class="btn btn-default">Submit</button>
-						  <input type="hidden" name="form" value="submitproject"> 
+						  <input type="hidden" name="form" value="submitproject">
 
-						</div><!-- well --> 
+						</div><!-- well -->
 					</form>
 				</div><!-- col-lg-8 -->
 			<div class="col-lg-2">
@@ -129,7 +129,7 @@
 <div id="f">
 	<div class="container">
 		<div class="row centered">
-			
+
 		</div><!-- row -->
 	</div><!-- container -->
 </div><!-- Footer -->
