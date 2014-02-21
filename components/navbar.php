@@ -7,14 +7,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img src="img/SYD.png" id="navbarLogo"></img></a>
+          <a class="navbar-brand" href="./"><img src="img/SYD.png" id="navbarLogo"></img></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li
 			<?php if($this->title == "Home") echo ' class="active"'; ?>
-		><a href="index.php">HOME</a></li>
-            <?php 
+		><a href="./">HOME</a></li>
+            <?php
 			if($GLOBALS['account']->logged) {
 				echo '<li' ;
 				if($this->title == "Projects") echo ' class="active"';
@@ -24,7 +24,7 @@
 		<li
 			<?php if($this->title == "Submit Proposal") echo ' class="active"'; ?>
 		><a href="projectform.php">SUBMIT PROPOSAL</a></li>
-            
+
 		<li
 			<?php if($this->title == "Login" || $this->title == "Account") echo ' class="active"'; ?>
 		>

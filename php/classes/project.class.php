@@ -10,7 +10,6 @@ class project {
 	public $goalOne;
 	public $goalTwo;
 	public $goalThree;
-	public $userNeeds;
 	public $budget;
 	public $resources;
 	public $additionalInfo;
@@ -51,7 +50,6 @@ class project {
 		$project->goalOne = $result['goalOne'];
 		$project->goalTwo = $result['goalTwo'];
 		$project->goalThree = $result['goalThree'];
-		$project->userNeeds = $result['userNeeds'];
 		$project->budget = $result['budget'];
 		$project->resources = $result['resources'];
 		$project->additionalInfo = $result['additionalInfo'];
@@ -121,7 +119,6 @@ class project {
 		$project->goalOne = $_POST['goalOne'];
 		$project->goalTwo = $_POST['goalTwo'];
 		$project->goalThree = $_POST['goalThree'];
-		$project->userNeeds = $_POST['userNeeds'];
 		$project->budget = $_POST['budget'];
 		$project->resources = $_POST['resources'];
 		$project->additionalInfo = $_POST['additionalInfo'];
@@ -137,7 +134,10 @@ class project {
 		}
 
 		//Insert the project into the database
-		$query = "INSERT INTO projects(title,sponsorName,phoneNumber,email,description,goalOne,goalTwo,goalThree,userNeeds,budget,resources,additionalInfo,approval) VALUES (:title,:sponsorName,:phoneNumber,:email,:description,:goalOne,:goalTwo,:goalThree,:userNeeds,:budget,:resources,:additionalInfo,0);";
+		$query = "INSERT INTO projects
+			(title,sponsorName,phoneNumber,email,description,goalOne,goalTwo,goalThree,budget,resources,additionalInfo,approval)
+			VALUES
+			(:title,:sponsorName,:phoneNumber,:email,:description,:goalOne,:goalTwo,:goalThree,:budget,:resources,:additionalInfo,0);";
 		$query_params = array(
 			':title' => $project->title,
 			':sponsorName' => $project->sponsorName,
@@ -147,7 +147,6 @@ class project {
 			':goalOne' => $project->goalOne,
 			':goalTwo' => $project->goalTwo,
 			':goalThree' => $project->goalThree,
-			':userNeeds' => $project->userNeeds,
 			':budget' => $project->budget,
 			':resources' => $project->resources,
 			':additionalInfo' => $project->additionalInfo
