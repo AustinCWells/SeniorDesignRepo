@@ -122,6 +122,20 @@ class account {
 		header("Location: index.php");
 		die("Redirecting to index.php");
 	}
+
+	static function confirmationEmail($to) {
+
+		$subject = 'SMU Senior Design Account Confirmation';
+
+		$headers = "From: " . "\r\n";
+		$headers .= "Reply-To: " . "\r\n";
+		$headers .= "CC: \r\n";
+		$headers .= "MIME-Version: 1.0\r\n";
+		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+		$message .= "";
+		$message .= "";
+	}
 }
 
 //http://forums.devshed.com/php-faqs-and-stickies-167/how-to-program-a-basic-but-secure-login-system-using-891201.html
