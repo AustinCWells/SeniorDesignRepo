@@ -31,16 +31,16 @@ class account {
 
 	function register() {
 		//Validation
-		if(empty($_POST['name'])) die("Please enter your name.");
-		if(empty($_POST['email'])) die("Please enter a email.");
-		if(empty($_POST['password'])) die("Please enter a password.");
-		if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) die("Invalid E-Mail Address.");
+		if(empty($_POST['name'])) $GLOBALS['errors'][] = "Please enter your name.";
+		if(empty($_POST['email'])) $GLOBALS['errors'][] = "Please enter an email";
+		if(empty($_POST['password'])) $GLOBALS['errors'][] = "Please enter a password.";
+		if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) $GLOBALS['errors'][] = "Invalid email address.";
 
 		//Check to see if email is in use
 		$query = "SELECT 1 FROM members WHERE email = :email";
 		$query_params = array(':email'=>$_POST['email']);
 		$result = $GLOBALS['MySQL']->query($query,$query_params);
-		if($result->fetch()) die("This email is already in use.");
+		if($result->fetch()) $GLOBALS['errors'][] = "The email is already in use";
 
 		//Prepare/run statement for entry into database
 		$query = "
@@ -112,7 +112,7 @@ class account {
 			header("Location: index.php");
 			die("Redirecting to index.php");
 		} else {
-			print("Login Failed.");
+			$GLOBALS['errors'][] = "Login failed";
 			$submitted_username = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');
 		}
 	}

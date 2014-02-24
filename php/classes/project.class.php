@@ -126,11 +126,12 @@ class project {
 
 		//Clean phone number
 		$project->phoneNumber = preg_replace('/[^0-9+]/', '', $project->phoneNumber);
-		if(strlen($project->phoneNumber)<10) die("Please enter a valid phone number in the form (xxx) xxx-xxxx");
+		if(strlen($project->phoneNumber)<10) $GLOBALS['errors'][] = "Please enter a valid phone number in the form (xxx) xxx-xxxx";
 
 		//Validate email
 		if(!filter_var($project->email,FILTER_VALIDATE_EMAIL)) {
-			die("Invalid e-mail!");
+			$GLOBALS['errors'][] = "Invalid e-mail";
+			return;
 		}
 
 		//Insert the project into the database

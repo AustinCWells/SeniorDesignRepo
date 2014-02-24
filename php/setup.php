@@ -28,9 +28,6 @@
 		}
 
 
-
-
-
 	$p->startpage();
 
 	//Establish MySQL connection
@@ -45,5 +42,12 @@
 		elseif($form=="submitproject") project::submit();
 	} elseif(!empty($_GET)) {
 		if(isset($_GET['logout']) && $_GET['logout']=='yes') $account->logout();
+	}
+
+	//Display error messages, notices:
+	foreach($errors as $k=>$v) {
+		?>
+			<p class="error"><?= $v; ?></p>
+		<?php
 	}
 ?>
