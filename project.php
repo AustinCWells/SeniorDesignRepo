@@ -61,7 +61,9 @@
 				 <li class="list-group-item" id="contactNum">Contact #: <?= formatPhoneNumber($project->phoneNumber); ?></li>
 			    <li class="list-group-item" id="sponsor">Sponsor: <?= $project->sponsorName; ?></li>
 			    <li class="list-group-item" id="projectDescription">Project Description: <br> <?= $project->description; ?></li>
-			   	<li class="list-group-item" id="userNeeds">Primary User Needs: <br> <?= $project->userNeeds; ?></li>
+			   	<li class="list-group-item" id="goalOne">Goal One: <br> <?= $project->goalOne; ?></li>
+			   	<li class="list-group-item" id="goalTwo">Goal Two: <br> <?= $project->goalTwo; ?></li>
+			   	<li class="list-group-item" id="goalThree">Goal Three: <br> <?= $project->goalThree; ?></li>
 			    <li class="list-group-item" id="additionalResources">Additional Resources Provided: <br> <?= $project->resources; ?></li>
 
 			    <?php

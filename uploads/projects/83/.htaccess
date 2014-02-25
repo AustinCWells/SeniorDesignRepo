@@ -1,3 +1,0 @@
-DirectoryIndex index.php
-php_value auto_prepend_file "php/setup.php"
-php_value auto_append_file "php/cleanup.php"
