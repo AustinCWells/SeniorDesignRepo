@@ -514,6 +514,17 @@ form legend{
 }
 
 .declined{
-    background-color: red;
-
+    background-color: #ac2925 !important;
+    border-color: #ac2925 !important;
 }
+
+.approved{
+    background-color: #47a447 !important;
+    border-color: #47a447 !important;
+}
+
+.waitlisted{
+    background-color: #ed9c28 !important;
+    border-color: #ed9c28 !important;
+}
+

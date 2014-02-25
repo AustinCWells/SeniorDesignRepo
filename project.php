@@ -33,7 +33,19 @@
 				}
 			?>">
 			  <!-- Default panel contents -->
-			  <div class="panel-heading" id="projectTitle" onclick="goBack()"><i class="fa fa-angle-double-left backLogo" > </i><?= $project->title; ?></div>
+			  <div class="panel-heading <?php
+				switch ($project->approval) {
+				   case '1':
+					  echo "approved";
+					  break;
+				   case '2':
+					  echo "waitlisted";
+					  break;
+				   case '3':
+					  echo "declined";
+					  break;
+				}
+			?>" id="projectTitle" onclick="goBack()"><i class="fa fa-angle-double-left backLogo" > </i><?= $project->title; ?></div>
 
 
 			<script>
@@ -55,10 +67,11 @@
 			    <?php
 			    //List files (If there are any)
 				if($project->files != null) {
-					echo '<li class="list-group-item" id="radditionalFiles">Files:</li>';
+					echo '<li class="list-group-item" id="radditionalFiles">Files:';
 					foreach($project->files as $file) {
 						echo '<a class="projectFiles" href="'.rootDirectory().'uploads/projects/'.$project->id.'/'.$file.'">'.$file.'</a>';
 					}
+					echo '</li>';
 				}
 
 				//Display approval or buttons if not rated yet
@@ -70,7 +83,7 @@
 					   <a href="?approved=3<?= currentURIVars(); ?>"><button type="button" class="btn btn-danger">Decline</button></a>
 				    <?php
 				} else {
-					?> <a href="?approved=0<?= currentURIVars(); ?>"><button type="button" class="btn btn-dange">Undo Approval</button></a> <?php
+					?> <a href="?approved=0<?= currentURIVars(); ?>"><button type="button" class="btn btn-dange">Revert Decision</button></a> <?php
 					    switch ($project->approval) {
 						   case '1':
 							  echo "<p>Approved</p>";
